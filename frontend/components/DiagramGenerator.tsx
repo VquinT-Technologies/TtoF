@@ -5,7 +5,7 @@ import axios from 'axios';
 import mermaid from 'mermaid';
 import { Sparkles, ZoomIn, ZoomOut, Download, Copy, Trash2 } from 'lucide-react';
 
-const API_URL = 'http://localhost:8000';
+const API_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000';
 
 export default function DiagramGenerator() {
   const [text, setText] = useState('');
